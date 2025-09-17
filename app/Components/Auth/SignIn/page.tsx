@@ -144,12 +144,12 @@ export default function page() {
                 {isLoading ? "Signing in..." : "Sign In"}
               </Button>
 
-              <div className="text-center text-sm text-muted-foreground">
+              {/* <div className="text-center text-sm text-muted-foreground">
                 {"Don't have an account? "}
                 <a onClick={() => { gotoSignUp() }} href="#" className="text-primary hover:text-primary/80 font-medium transition-colors">
                   Sign up
                 </a>
-              </div>
+              </div> */}
             </CardFooter>
           </form>
         </Card>
