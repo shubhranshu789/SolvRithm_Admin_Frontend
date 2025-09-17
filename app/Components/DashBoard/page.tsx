@@ -112,7 +112,7 @@ export default function AdminDashboard() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://localhost:5000/projects") // adjust API URL
+      const res = await fetch(`https://solvrithm-admin-backend.onrender.com/projects`) // adjust API URL
       const data: Project[] = await res.json()
       setProjects(data)
     } catch (err) {
