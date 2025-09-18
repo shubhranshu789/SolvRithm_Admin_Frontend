@@ -8,6 +8,9 @@ import { useRouter } from 'next/navigation'
 
 import Navabr from "../../Components/Navbar/page"
 
+
+// import "../../Components/AllGitHubRepo"
+
 type Project = {
   _id: string
   name: string
@@ -27,10 +30,18 @@ export default function ProjectPage() {
   const searchParams = useSearchParams()
   const id = searchParams.get('id')
 
+
+
   const [data, setData] = React.useState<Project | null>(null)
   const [loading, setLoading] = React.useState<boolean>(true)
   const [error, setError] = React.useState<string | null>(null)
   const router = useRouter()
+
+
+
+  const gotoRepo = () => {
+    router.push(`/Components/AllGitHubRepo?id=${id}`);
+  }
 
 
   const handleDelete = async () => {
@@ -260,6 +271,13 @@ export default function ProjectPage() {
                       className="inline-flex items-center justify-center rounded-xl bg-rose-600/90 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-rose-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400"
                     >
                       Delete
+                    </button>
+                    <button
+                      type="button"
+                      onClick={gotoRepo}
+                      className="inline-flex items-center justify-center rounded-xl bg-yellow-600/90 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-green-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400"
+                    >
+                      All Git Repos
                     </button>
                     {/* <a
                       href={`/projects/${data._id}`}
