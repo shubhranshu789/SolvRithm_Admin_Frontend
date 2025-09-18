@@ -27,7 +27,7 @@ export default function ProjectStudents() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/project/${projectId}/students`);
+        const res = await fetch(`https://solvrithm-admin-backend.onrender.com/project/${projectId}/students`);
         const data = await res.json();
         setProjectName(data.projectName);
         setStudents(data.students);
