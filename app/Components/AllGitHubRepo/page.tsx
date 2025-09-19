@@ -65,7 +65,7 @@ export default function ProjectStudents() {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:5000/projects/${projectId}/approve/${stuId}`,
+        `https://solvrithm-admin-backend.onrender.com/projects/${projectId}/approve/${stuId}`,
         {
           method: "PUT",
           headers: {
@@ -95,7 +95,7 @@ export default function ProjectStudents() {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:5000/projects/${projectId}/disapprove/${stuId}`,
+        `https://solvrithm-admin-backend.onrender.com/projects/${projectId}/disapprove/${stuId}`,
         {
           method: "PUT",
           headers: {
