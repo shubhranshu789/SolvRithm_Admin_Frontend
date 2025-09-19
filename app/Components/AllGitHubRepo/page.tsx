@@ -167,7 +167,7 @@ export default function ProjectStudents() {
 
 
 
-                <div style={{marginTop : "20px" , display : "flex" , gap : "10px"}}>
+                {/* <div style={{marginTop : "20px" , display : "flex" , gap : "10px"}}>
                   <button
                     onClick={() => { handleApprove(s.id) }}
                     disabled={loading || approved}
@@ -186,7 +186,7 @@ export default function ProjectStudents() {
                     {!approved ? "Disapproved" : loading ? "Disapproving..." : "Disapprove"}
                   </button>
 
-                </div>
+                </div> */}
 
 
               </CardContent>
